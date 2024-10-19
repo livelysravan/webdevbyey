@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function handleclick () {
+            alert ("You Clicked");
+        }
+        function handlemouseover () {
+            alert ("mouse over!");
+
+        }
+        function handlemouseover() {
+            console.log ("mouse out of the button!!");
+        }
+    let pageTitle = document.getElementById("pageTitle");
+    let button = document.getElementById("myButton");
+    pageTitle.addEventListener("click", handleclick);
+    button.addEventListener("mouseout", handleMouseout);
+    window.onload=handlePageLoad;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript DOM Manipulation</title>
+    <style>
+            .highlight {
+                color: red;
+                font-weight: bold;
+            }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <p id="message">Click the button to change the message</p>
+    </div>
+    <button onclick="changemessage()">Change Message</button>
+    <button onclick="addNewElement()">Add New 
+        Element</button>
+
+<script>
+    function changemessage(){
+        let messageElement = document.getElementById("message");
+        messageElement.textContent = "Message changed using textContent.";
+        messageElement.innerHTML+="<br> Added new innerHTML";
+        messageElement.style.color="blue";
+        messageElement.style.fontsize = "1.2em";
+    
+    }
+
+    function addNewElement(){
+        let contentdiv = document.querySelector("#content");
+        let newelement = document.createElement("p");
+        newelement.textcontent="This is a new Paragraph added dynamically";
+        newelement.classList.add ("highlight");
+         
+    }
+</script>
+</body>
+</html>
